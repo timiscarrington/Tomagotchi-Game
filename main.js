@@ -3,7 +3,7 @@ const strGameBtn= document.querySelector('#start');
 const feedPetBtn= document.querySelector('#feed');
 const playfulPetBtn = document.querySelector('#play');
 const petRestBtn = document.querySelector('#sleep');
-const form = document.querySelector("#form");
+const form = document.querySelector('#pet-name');
 // pet object 
 
 const pet = {
@@ -61,7 +61,7 @@ playfulPetBtn.addEventListener('click', playfulPet);
 petRestBtn.addEventListener('click', petRest);
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    const li = document.createElement('li');
+    const petName = document.createElement('h2');
     const input =document.querySelector('#text');
-    li.textContent=input.value;
-    document.querySelector('ul').appendChild(li);
+    petName.textContent=input.value;
+    document.querySelector('ul').appendChild(petName)});

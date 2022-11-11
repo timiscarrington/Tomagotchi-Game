@@ -1,6 +1,51 @@
+body {
+    background: #747bce;
+  }
 .health {
- 
- align-items: center;
- justify-content:center
+    margin: 2rem auto;
+  width: 30rem;
+  text-align: left;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: white;
+};
+.health {
+    display: flex;
+    flex-direction: column;
+}
+.health  {
+        font: inherit;
+        background: #ff0062;
+        border: 1px solid #ff0062;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 0.5rem;
+      }
+      button {
+        font: inherit;
+        background: #3e4ab4;
+        border: 1px solid #96556e;
+        color: rgb(232, 219, 219);
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 0.5rem;
+      }
+      button:focus {
+        outline: none;
+      }
+      button:hover,
+button:active {
+  background: #9170a4;
+  border-color: #a927f5;
+}
 
+img {
+    max-width: 20%;
+    max-height: 20%;
+    margin:fit-content;
+    align-content: flex-end;
 }
