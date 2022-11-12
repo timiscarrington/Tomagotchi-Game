@@ -1,19 +1,30 @@
 body {
     background: #050508;
-    
+    display: grid;
+    grid-template-rows: 1fr 2fr;
 }
   h1 {
     text-align: center;
+    color: azure;
   }
+  h4 {
+    text-align: center;
+    color: azure;
+  }
+
 
 #left-side {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 3em;
 }
+#left-side h3{
+    text-align: center;
+    color: rgb(214, 159, 30);
+}
 #name{
     background: #8d71a3;
-    color: azure;
+    color: rgb(224, 176, 66);
     font-size: large
 }
 #text{
@@ -27,12 +38,10 @@ body {
     padding-top: 7%;
   } */
 .health {
-   
-   
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    text-align: center;
     background: #8d71a3;
-    color: azure;
-    font-size: large
+    color: rgb(224, 176, 66);
+    font-size: 20px;
 };
 #he {
     display: inline;
