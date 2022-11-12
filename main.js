@@ -5,7 +5,7 @@ const playfulPetBtn = document.querySelector('#playful');
 const petRestBtn = document.querySelector('#sleepy');
 const form = document.querySelector('#pet-name');
 const img = document.querySelector('#images');
-// pet object 
+const dailyNeeds = 3;
 
 const pet = {
     hunger: 0,
@@ -26,10 +26,10 @@ const startGame = () => {
 }
 //function that deducts percentage from different health markers of pet
 const wearAndTear = () => {
-    pet.age += .5
-    pet.hunger += .5
-    pet.play += .5
-    pet.sleep += .5
+    pet.age += .1
+    pet.hunger += .25
+    pet.play += .2
+    pet.sleep += .2
 
     if(pet.sleep >= 10 || pet.hunger >= 10 || pet.play >= 10){
         img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/giphy::2.gif';
@@ -40,9 +40,9 @@ const wearAndTear = () => {
 }
 //displays the increase and decrease of pet health markers
 const showHealth = () => {
-    document.querySelector('#hunger').textContent = pet.hunger;
-    document.querySelector('#play').textContent = pet.play;
-    document.querySelector('#sleep').textContent = pet.sleep;
+    document.querySelector('#hunger').textContent = pet.hunger.toFixed(2);
+    document.querySelector('#play').textContent = pet.play.toFixed(2);
+    document.querySelector('#sleep').textContent = pet.sleep.toFixed(2);
     document.querySelector('#age').textContent = pet.age;
 }
 
