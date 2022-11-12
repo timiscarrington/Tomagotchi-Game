@@ -1,5 +1,6 @@
 body {
-    background: #747bce;
+    background: #050508;
+    
 }
   h1 {
     text-align: center;
@@ -7,49 +8,62 @@ body {
 
 #left-side {
     display: grid;
-    background-color:#ff0062;
-    gap: 2em;
-
-  }
-  #center {
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 3em;
+}
+#name{
+    background: #8d71a3;
+    color: azure;
+    font-size: large
+}
+#text{
+    height: 40px;
+    width: 200px;
+}
+  /* #center {
     display: grid;
     grid-template-columns: 20% 80%;
     gap: 2em;
     padding-top: 7%;
-  }
+  } */
 .health {
    
-    padding: 1rem;
+   
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    background: rgb(189, 121, 121);
+    background: #8d71a3;
     color: azure;
     font-size: large
 };
 #he {
-    display: grid;
-    grid-template-columns: 20% 20% 20%;
+    display: inline;
+    
 }
-      button {
-        font: inherit;
-        background: #3e4ab4;
-        border: 1px solid #96556e;
-        color: rgb(232, 219, 219);
-        padding: 1rem 2rem;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 0.5rem;
-      }
-      button:focus {
+button {
+       
+    font: inherit;
+    background: #793aad;
+    border: 1px solid #b2aeaf;
+    color: rgb(224, 176, 66);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0.5rem;
+};
+button:focus {
         outline: none;
-      }
-      button:hover,
+}
 button:active {
   background: #9170a4;
-  border-color: #a927f5;
+  border-color: #b5b2b6;
+}
+#buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 7%;
 }
 
 #image-container {
-   width: 300px;
+   width: 450px;
     height: 240px;
     
 }
