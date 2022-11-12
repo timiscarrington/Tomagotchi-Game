@@ -1,9 +1,10 @@
 //where const for event listeners will go, and all needed gloabl variables
 const strGameBtn= document.querySelector('#start');
 const feedPetBtn= document.querySelector('#feed');
-const playfulPetBtn = document.querySelector('#play');
-const petRestBtn = document.querySelector('#sleep');
+const playfulPetBtn = document.querySelector('#playful');
+const petRestBtn = document.querySelector('#sleepy');
 const form = document.querySelector('#pet-name');
+const img = document.querySelector('#images');
 // pet object 
 
 const pet = {
@@ -30,9 +31,10 @@ const wearAndTear = () => {
     pet.play += .5
     pet.sleep += .5
 
-    if(pet.sleep >= 10 || pet.hunger >= 10 || pet.hunger >= 10){
-        clearInterval(overallHealth)
+    if(pet.sleep >= 10 || pet.hunger >= 10 || pet.play >= 10){
+        img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/giphy::2.gif';
         alert('You killed this one. Maybe try a house plant instead?')
+        clearInterval(overallHealth)
     }
     showHealth();
 }
@@ -46,22 +48,28 @@ const showHealth = () => {
 
 
 const feedPet = () => {
-    pet.hunger -= 1
-}
-const playfulPet = () => {
-    pet.play -= 1
-}
-const petRest = () => {
-    pet.sleep -= 1
-}
+    pet.hunger -= 1;
+    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/hungry pig.webp'
+ };
 
-strGameBtn.addEventListener('click', startGame);
-feedPetBtn.addEventListener('click', feedPet);
-playfulPetBtn.addEventListener('click', playfulPet);
-petRestBtn.addEventListener('click', petRest);
-form.addEventListener("submit", (event) => {
+ function playfulPet(){
+    pet.play -=1
+    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/playing pig.gif'
+ }
+    
+const petRest = () => {
+    pet.sleep -= 1;
+    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/sleepy pig.gif'
+};
+
+strGameBtn.addEventListener('click', startGame)
+feedPetBtn.addEventListener('click', feedPet)
+playfulPetBtn.addEventListener('click', playfulPet)
+petRestBtn.addEventListener('click', petRest)
+
+form.addEventListener('submit', (event) => {
     event.preventDefault()
     const petName = document.createElement('h2');
-    const input =document.querySelector('#text');
+    const input = document.querySelector('#text');
     petName.textContent=input.value;
     document.querySelector('ul').appendChild(petName)});
