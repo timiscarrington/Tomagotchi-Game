@@ -43,28 +43,27 @@ const showHealth = () => {
     document.querySelector('#hunger').textContent = pet.hunger.toFixed(2);
     document.querySelector('#play').textContent = pet.play.toFixed(2);
     document.querySelector('#sleep').textContent = pet.sleep.toFixed(2);
-    document.querySelector('#age').textContent = pet.age;
+    document.querySelector('#age').textContent = pet.age.toFixed(2)
 }
 
 
 const feedPet = () => {
     pet.hunger -= 1;
-    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/hungry pig.webp'
+
  };
 
- function playfulPet(){
+ function playPet(){
     pet.play -=1
-    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/playing pig.gif'
  }
     
 const petRest = () => {
     pet.sleep -= 1;
-    img.src= '/Users/timcarrington/sei/projects/Tomagotchi-Game/sleepy pig.gif'
+
 };
 
 strGameBtn.addEventListener('click', startGame)
 feedPetBtn.addEventListener('click', feedPet)
-playfulPetBtn.addEventListener('click', playfulPet)
+playfulPetBtn.addEventListener('click', playPet)
 petRestBtn.addEventListener('click', petRest)
 
 form.addEventListener('submit', (event) => {
