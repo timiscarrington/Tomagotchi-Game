@@ -5,7 +5,7 @@ const playfulPetBtn = document.querySelector('#playful');
 const petRestBtn = document.querySelector('#sleepy');
 const form = document.querySelector('#pet-name');
 const img = document.querySelector('#images');
-const dailyNeeds = 3;
+
 
 const pet = {
     hunger: 0,
